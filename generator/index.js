@@ -16,6 +16,30 @@ module.exports = (api, opts, rootOptions) => {
         'node-sass': '^4.9.2'
       }
     })
+  }else if(opts.envAlpha){
+    api.render({
+      './.env.alpha': './templates/src/.env.alpha'
+    })
+  }else if(opts.envDevelopment){
+    api.render({
+      './.env.development': './templates/src/_env.development'
+    })
+  }else if(opts.eslintIgnore){
+    api.render({
+      './.eslintignore': './templates/src/_eslintignore'
+    })
+  }else if(opts.prettierrc){
+    api.render({
+      './.prettierrc': './templates/src/_prettierrc'
+    })
+  }else if(opts.styleLintrc){
+    api.render({
+      './.stylelintrc': './templates/src/_stylelintrc'
+    })
+  }else if(opts.npmrc){
+    api.render({
+      './.npmrc': './templates/src/.npmrc'
+    })
   }else if (opts.dockerIgnore) {
     api.render({
       './.dockerignore': './templates/src/.dockerignore'
@@ -23,30 +47,6 @@ module.exports = (api, opts, rootOptions) => {
   }else if(opts.changeDockerfile){
     api.render({
       './Dockerfile': './templates/src/plugins/index.js'
-    })
-  }else if(opts.envAlpha){
-    api.render({
-      './.env.alpha': './templates/src/.env.alpha'
-    })
-  }else if(opts.envDevelopment){
-    api.render({
-      './.env.development': './templates/src/.env.development'
-    })
-  }else if(opts.eslintIgnore){
-    api.render({
-      './.eslintignore': './templates/src/.env.eslintignore'
-    })
-  }else if(opts.prettierrc){
-    api.render({
-      './.prettierrc': './templates/src/.prettierrc'
-    })
-  }else if(opts.styleLintrc){
-    api.render({
-      './.stylelintrc': './templates/src/.stylelintrc'
-    })
-  }else if(opts.npmrc){
-    api.render({
-      './.npmrc': './templates/src/.npmrc'
     })
   }
 }
