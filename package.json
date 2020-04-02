@@ -1,11 +1,11 @@
 {
-  "name": "vue-cli-plugin-wangy1fan-cli",
-  "version": "1.0.1",
+  "name": "vue-cli-plugin-syhh-cli",
+  "version": "1.0.0",
   "description": "vue cli to init project environment",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com:wangyifannn/wyf-cli.git"
+    "url": "git+ssh://git@github.com:wangyifannn/syhh-cli.git"
   },
   "keywords": [
     "syhh",
@@ -13,10 +13,10 @@
     "vue-cli",
     "cli"
   ],
-  "author": "Leopoldthecoder",
+  "author": "wangyifan",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/wangyifannn/wyf-cli/issues"
+    "url": "https://github.com/wangyifannn/syhh-cli/issues"
   },
-  "homepage": "https://github.com/wangyifannn/wyf-clit#readme"
+  "homepage": "https://github.com/wangyifannn/syhh-clit#readme"
 }

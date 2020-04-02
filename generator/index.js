@@ -1,14 +1,14 @@
 module.exports = (api, opts, rootOptions) => {
   const utils = require('./utils')(api)
 
-  api.injectImports(utils.getMain(), `import './plugins/element.js'`)
+  api.injectImports(utils.getMain(), `import './plugins/index.js'`)
 
-  api.render({
-    './src/plugins/element.js': './templates/src/plugins/element.js'
-  })
+  // api.render({
+  //   './src/plugins/index.js': './templates/src/plugins/index.js'
+  // })
   if (opts.customTheme) {
     api.render({
-      './src/element-variables.scss': './templates/src/element-variables.scss'
+      './src/variables.scss': './templates/src/variables.scss'
     })
     api.extendPackage({
       devDependencies: {
@@ -16,15 +16,37 @@ module.exports = (api, opts, rootOptions) => {
         'node-sass': '^4.9.2'
       }
     })
-  }
-
-   if (opts.dockerIgnore) {
+  }else if (opts.dockerIgnore) {
     api.render({
       './.dockerignore': './templates/src/.dockerignore'
+    })
+  }else if(opts.changeDockerfile){
+    api.render({
+      './Dockerfile': './templates/src/plugins/index.js'
     })
   }else if(opts.envAlpha){
     api.render({
       './.env.alpha': './templates/src/.env.alpha'
+    })
+  }else if(opts.envDevelopment){
+    api.render({
+      './.env.development': './templates/src/.env.development'
+    })
+  }else if(opts.eslintIgnore){
+    api.render({
+      './.eslintignore': './templates/src/.env.eslintignore'
+    })
+  }else if(opts.prettierrc){
+    api.render({
+      './.prettierrc': './templates/src/.prettierrc'
+    })
+  }else if(opts.styleLintrc){
+    api.render({
+      './.stylelintrc': './templates/src/.stylelintrc'
+    })
+  }else if(opts.npmrc){
+    api.render({
+      './.npmrc': './templates/src/.npmrc'
     })
   }
 }
