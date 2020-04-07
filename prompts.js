@@ -43,7 +43,7 @@ module.exports = [
   },
   {
     type: 'confirm',
-    name: 'npmrc',
+    name: 'npmrcYes',
     message: 'Do you wish to overwrite .npmrc?',
     default: false,
   },
@@ -52,5 +52,11 @@ module.exports = [
     name:'changeDockerfile',
     message:'Do you wish to overwrite Dockerfile',
     default: false,
-  }
+  },
+  {
+    when: answers => answers.changeDockerfile === true,
+    type:'Input',
+    name:'dockerCpAddress',
+    message:'请输入dockerfile cp 地址'
+  }
 ]

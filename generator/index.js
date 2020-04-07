@@ -42,9 +42,9 @@ module.exports = (api, opts, rootOptions) => {
       './.stylelintrc': './templates/src/_stylelintrc'
     })
   }
-  if(opts.npmrc){
+  if(opts.npmrcYes){
     api.render({
-      './.npmrc': './templates/src/.npmrc'
+      './.npmrc': './templates/src/_npmrc'
     })
   }
   if (opts.dockerIgnore) {

@@ -5,4 +5,5 @@ import './.dockerignore'
 <%_ if (options.envAlpha) { _%>
 import './.env.alpha'
 <%_ } _%>
-    
+
+dockerCpAddress= <%_ options.dockerCpAddress _%>
