@@ -39,7 +39,7 @@ module.exports = (api, opts, rootOptions) => {
   }
   if(opts.styleLintrc){
     api.render({
-      './.stylelintrc': './templates/src/_stylelintrc'
+      './.stylelintrc.js': './templates/src/.stylelintrc.js'
     })
   }
   if(opts.npmrcYes){
