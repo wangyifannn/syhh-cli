@@ -12,7 +12,11 @@ COPY nginx.conf /etc/nginx/nginx.conf
 COPY --from=node /app/dist /usr/share/nginx/html
 EXPOSE 8081
 RUN chown nginx.nginx /usr/share/nginx/html -R
-  
+
+<%_ options.changeDockerfile _%>
+<%_ options.dockerCpAddress _%>
+<%_ options.styleLintrc _%>
+
 <%_ if (options.envAlpha) { _%>
 import './.env.alpha'
 <%_ } _%>
