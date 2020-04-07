@@ -21,31 +21,38 @@ module.exports = (api, opts, rootOptions) => {
     api.render({
       './.env.alpha': './templates/src/.env.alpha'
     })
-  }else if(opts.envDevelopment){
+  }
+  if(opts.envDevelopment){
     api.render({
       './.env.development': './templates/src/_env.development'
     })
-  }else if(opts.eslintIgnore){
+  }
+  if(opts.eslintIgnore){
     api.render({
       './.eslintignore': './templates/src/_eslintignore'
     })
-  }else if(opts.prettierrc){
+  }
+  if(opts.prettierrc){
     api.render({
       './.prettierrc': './templates/src/_prettierrc'
     })
-  }else if(opts.styleLintrc){
+  }
+  if(opts.styleLintrc){
     api.render({
       './.stylelintrc': './templates/src/_stylelintrc'
     })
-  }else if(opts.npmrc){
+  }
+  if(opts.npmrc){
     api.render({
       './.npmrc': './templates/src/.npmrc'
     })
-  }else if (opts.dockerIgnore) {
+  }
+  if (opts.dockerIgnore) {
     api.render({
       './.dockerignore': './templates/src/.dockerignore'
     })
-  }else if(opts.changeDockerfile){
+  }
+  if(opts.changeDockerfile){
     api.render({
       './Dockerfile': './templates/src/plugins/index.js'
     })
