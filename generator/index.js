@@ -16,7 +16,8 @@ module.exports = (api, opts, rootOptions) => {
         'node-sass': '^4.9.2'
       }
     })
-  }else if(opts.envAlpha){
+  }
+  if(opts.envAlpha){
     api.render({
       './.env.alpha': './templates/src/.env.alpha'
     })
