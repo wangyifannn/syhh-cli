@@ -55,7 +55,7 @@ module.exports = [
   },
   {
     when: answers => answers.changeDockerfile === true,
-    type:'Input',
+    type:'text',
     name:'dockerCpAddress',
     message:'请输入dockerfile cp 地址'
   }

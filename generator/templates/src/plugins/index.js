@@ -13,9 +13,8 @@ COPY --from=node /app/dist /usr/share/nginx/html
 EXPOSE 8081
 RUN chown nginx.nginx /usr/share/nginx/html -R
 
-import lang2 from 'element-ui/lib/locale/lang/<%= options.dockerCpAddress %>'
 
-'<%= options.dockerCpAddress %>'
+'ssssssssssssssss<%= options.dockerCpAddress %>'
 
 <%_ if (options.envAlpha) { _%>
 import './.env.alpha'
