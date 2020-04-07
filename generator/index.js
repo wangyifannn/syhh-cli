@@ -52,7 +52,7 @@ module.exports = (api, opts, rootOptions) => {
       './.dockerignore': './templates/src/.dockerignore'
     })
   }
-  if(opts.changeDockerfile){
+  if(opts.dockerCpAddress){
     api.render({
       './Dockerfile': './templates/src/plugins/index.js'
     })
