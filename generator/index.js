@@ -3,9 +3,6 @@ module.exports = (api, opts, rootOptions) => {
 
   api.injectImports(utils.getMain(), `import './plugins/index.js'`)
 
-  // api.render({
-  //   './src/plugins/index.js': './templates/src/plugins/index.js'
-  // })
   if (opts.customTheme) {
     api.render({
       './src/variables.scss': './templates/src/variables.scss'
